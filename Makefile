@@ -11,6 +11,9 @@ build:
 	@cargo +nightly b -r --workspace
 	@ls -l target/wasm32-unknown-unknown/release/*.wasm
 
+deploy:
+	deno run -A https://gear.deno.dev/deploy.ts
+
 fmt:
 	@echo ⚙️ Formatting...
 	@cargo fmt --all
